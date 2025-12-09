@@ -29,6 +29,7 @@ services:
       UVICORN_PORT: "8002"
       YOUR_DOMAIN: ${DOMAIN}
     ports:
+      - "1080:1080"
       - "127.0.0.1:8002:8002"
     networks:
       - free_vpn_bot
@@ -70,3 +71,4 @@ networks:
 volumes:
   marz-storage:
     driver: local
+
