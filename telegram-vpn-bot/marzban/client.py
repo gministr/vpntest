@@ -20,9 +20,6 @@ proxies = {
             "public-key": "6Pe1Roxy3oMXO5zjr1iXc8Nwut6JqHw9h6eLGnMxS1Y",  
             "short-id": "b368d65e84e1ee66"       
         }
-    "shadowsocks": {
-        "method": "chacha20-ietf-poly1305"
-    }
 }
 
 proxies = UserCreateProxies.from_dict(proxies)
@@ -107,4 +104,5 @@ async def delete_users():
     response: Response = await delete_expired_users.asyncio_detailed(expired_before=local_utc_time,
                                                                      client=await marzban_client.get_client())
     logger.info(f'DELETE USERS RESPONSE: {response.parsed}')
+
 
